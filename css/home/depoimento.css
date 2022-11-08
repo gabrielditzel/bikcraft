@@ -1,0 +1,68 @@
+.depoimento {
+  overflow-x: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: var(--cor-p1);
+}
+
+.depoimento img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+.depoimento-conteudo {
+  align-self: end;
+  padding: 40px 40px 80px 80px;
+  background: url('../../img/dec/bottom-right-p.svg') no-repeat bottom 40px
+    right 40px;
+}
+
+.depoimento-conteudo p {
+  margin-bottom: 32px;
+  position: relative;
+  max-width: 32ch;
+  font-family: 'Merriweather', serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.depoimento-conteudo p::before,
+.depoimento-conteudo p::after {
+  position: absolute;
+  font-size: 5rem;
+  color: var(--cor-p2);
+}
+
+.depoimento-conteudo p::before {
+  content: '“';
+  top: -20px;
+  left: -50px;
+}
+
+.depoimento-conteudo p::after {
+  content: '”';
+}
+
+@media (min-width: 1200px) {
+  .depoimento img {
+    max-height: 520px;
+  }
+}
+
+@media (max-width: 800px) {
+  .depoimento {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .depoimento img {
+    max-height: 200px;
+  }
+
+  .depoimento-conteudo {
+    margin: auto;
+    padding: 40px 20px;
+  }
+}
